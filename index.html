@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leonid Poezzhaev</title>
+    <link rel="icon" type="image/jpeg" href="src/photo.jpg">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <div class="cursor-glow" id="cursorGlow"></div>
+    <div class="bg-orb bg-orb-1"></div>
+    <div class="bg-orb bg-orb-2"></div>
+    <div class="bg-orb bg-orb-3"></div>
+
+    <div class="app" id="app">
+        <div class="sections-wrapper" id="sectionsWrapper">
+
+            <section class="section hero-section" data-index="0">
+                <div class="section-content hero-content">
+                    <div class="hero-left">
+                        <div class="hero-badge">
+                            <span class="status-dot"></span>
+                            <span>Open to work</span>
+                        </div>
+                        <h1 class="hero-name">
+                            <span class="hero-name-line">Leonid</span>
+                            <span class="hero-name-line hero-name-line-accent">Poezzhaev</span>
+                        </h1>
+                        <h2 class="hero-title">Python Backend Developer</h2>
+                        <p class="hero-bio">
+                            Student of PSU (IKNT). Ready to take on tasks related to bots, automation, and the backend.
+                            I am confident in working with asynchronous Python, OOP, Git, SQLite, Aiogram.
+                            I am open to part-time positions and projects.
+                        </p>
+                        <div class="hero-meta">
+                            <span class="hero-location">
+                                <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                                Perm, Russia
+                            </span>
+                            <span class="hero-exp">~3 years experience</span>
+                        </div>
+                        <div class="hero-actions">
+                            <a href="src/резюме.pdf" class="btn btn-primary" download>
+                                <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                                Download Resume
+                            </a>
+                            <a href="#contacts" class="btn btn-secondary nav-to-section" data-target="4">
+                                <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+                                Get in Touch
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hero-right">
+                        <div class="hero-photo-wrapper">
+                            <div class="hero-photo-ring"></div>
+                            <div class="hero-photo-inner">
+                                <img src="src/photo.jpg" alt="Leonid Poezzhayev" class="hero-photo" onerror="this.style.display='none'; this.parentElement.querySelector('.hero-photo-fallback').style.display='flex';">
+                                <div class="hero-photo-fallback" style="display:none;">LP</div>
+                            </div>
+                            <div class="hero-photo-glow"></div>
+                        </div>
+                        <div class="hero-tagline">PORTFOLIO</div>
+                    </div>
+                </div>
+                <div class="scroll-hint">
+                    <span>Scroll to explore</span>
+                    <div class="scroll-hint-arrow">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="5 12 12 19 19 12"/><line x1="12" y1="19" x2="12" y2="5"/></svg>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section skills-section" data-index="1">
+                <div class="section-content skills-content">
+                    <div class="section-header">
+                        <h2 class="section-title">Knowledge & Stack</h2>
+                        <p class="section-subtitle">Technologies I work with confidently</p>
+                    </div>
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <img src="src/python.png" alt="Python" class="skill-icon-img">
+                            </div>
+                            <h3>Python</h3><p>Basic language, loops, data types, data structures, functions, etc.</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <img src="src/oop.png" alt="OOP" class="skill-icon-img">
+                            </div>
+                            <h3>OOP</h3><p>Classes, class objects, functions, child classes, class methods, etc.</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <img src="src/asyncio.png" alt="Asyncio" class="skill-icon-img">
+                            </div>
+                            <h3>Asynchronous programming</h3><p>Coroutine, Asyncio, Aiohttp, async/await</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <img src="src/git.png" alt="Git" class="skill-icon-img">
+                            </div>
+                            <h3>Git</h3><p>GitHub</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <img src="src/sqlite.png" alt="SQLite" class="skill-icon-img">
+                            </div>
+                            <h3>SQLite</h3><p>Database design, queries, aiosqlite integration</p>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <img src="src/aiogram.svg" alt="Bots & Automation" class="skill-icon-img">
+                            </div>
+                            <h3>Telegram Bots</h3><p>Aiogram, Telebot, Custom bots, web scraping, workflow automation</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section edu-work-section" data-index="2">
+                <div class="section-content edu-work-content">
+                    <div class="edu-work-grid">
+                        <div class="edu-work-column">
+                            <h2 class="section-title edu-work-main-title">Education</h2>
+                            <p class="section-subtitle">My learning path</p>
+                            <div class="edu-work-list">
+                                <div class="edu-work-card">
+                                    <div class="edu-badge-current">Current</div>
+                                    <h4>Пермский государственный национальный исследовательский университет</h4>
+                                    <p class="card-subtitle">Институт компьютерных наук и технологий</p>
+                                    <p class="card-desc">Обучаюсь на специальности "Информационные системы и технологии". В данный момент изучаю алгоритмы и язык программирования Python в рамках сопуствующих дисциплин.</p>
+                                </div>
+                                <div class="edu-work-card">
+                                    <div class="edu-badge-year">2023 – 2025</div>
+                                    <h4>МАОУ "Лицей №2" г.Перми</h4>
+                                    <p class="card-subtitle">Математический класс №2</p>
+                                    <p class="card-desc">Углубленное изучение языка программирования Python в рамках предмета "Информатика". Углубленная математика</p>
+                                </div>
+                                <div class="edu-work-card">
+                                    <div class="edu-badge-year">2021 – 2023</div>
+                                    <h4>МАОУ "Гимназия №33" г.Перми</h4>
+                                    <p class="card-subtitle">Математический класс</p>
+                                    <p class="card-desc">Углубленное изучение языка программирования Python в рамках предмета "Информатика". Углубленная математика</p>
+                                </div>
+                                <div class="edu-work-card">
+                                    <div class="edu-badge-year">2022</div>
+                                    <h4>ДНК им. А. А. Фридмана при ПГГПУ</h4>
+                                    <p class="card-subtitle">Язык программирования Python</p>
+                                    <p class="card-desc">Изучения языка программирования Python с нуля на базе "pythontutor". Разработка собственного калькулятора с использованием QT Designer.</p>
+                                </div>
+                                <div class="edu-work-card">
+                                    <div class="edu-badge-year">2021</div>
+                                    <h4>IT-Куб</h4>
+                                    <p class="card-subtitle">Системное администрирование</p>
+                                    <p class="card-desc">Изучение устройства компьютера. Сборка компьютера с нуля. Создание сети между множествами компьютерами. Техническое обслуживание.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="edu-work-column">
+                            <h2 class="section-title edu-work-main-title">Work</h2>
+                            <p class="section-subtitle">Professional experience</p>
+                            <div class="edu-work-list">
+                                <div class="edu-work-card">
+                                    <div class="edu-badge-current">Current</div>
+                                    <h4>Заказы с Авито</h4>
+                                    <p class="card-subtitle">Фриланс</p>
+                                    <p class="card-desc">Беру заказы с Авито на решение лабораторных задач и разработку Telegram ботов.</p>
+                                </div>
+                                <div class="edu-work-card">
+                                    <div class="edu-badge-year">2023 – 2024</div>
+                                    <h4>ООО "Ламик"</h4>
+                                    <p class="card-subtitle">Специалист-техник по поддержке пользователей ИКТ</p>
+                                    <p class="card-desc">Настройка и обслуживание технического оборудования. Создание небольших сервисов для привлечения клиентов и упрощения бизнес логики.</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section projects-section" data-index="3">
+                <div class="section-content projects-content">
+                    <div class="section-header">
+                        <h2 class="section-title">Pet Projects</h2>
+                        <p class="section-subtitle">What I build in my free time</p>
+                    </div>
+                    <div class="projects-grid">
+                        <div class="project-card">
+                            <div class="project-card-top">
+                                <div class="project-icon">
+                                    <!-- Замените src на URL изображения -->
+                                    <img src="src/psu_bot.jpg" alt="PSU Bot" class="project-icon-img">
+                                </div>
+                                <h3>PSU Bot</h3>
+                                <p>A multifunctional, multilingual bot for PSU students. It allows you to view the schedule, shorten links, generate QR codes, and view the university map in just two clicks.</p>
+                            </div>
+                            <div class="project-tags"><span>Aiogram</span><span>Async Python</span><span>SQLite</span></div>
+                        </div>
+                        <div class="project-card">
+                            <div class="project-card-top">
+                                <div class="project-icon">
+                                    <img src="src/lyceum_bot.jpg" alt="LyceumBot" class="project-icon-img">
+                                </div>
+                                <h3>Lyceum Bot</h3>
+                                <p>A multifunctional bot for convenient interaction with the schedule for students at Lyceum №2. It allows you to view the schedule for your class, other classes, teachers, the bell, and much more.</p>
+                            </div>
+                            <div class="project-tags"><span>Telebot</span><span>Sqlite3</span><span>Urllib.Request</span></div>
+                        </div>
+                        <div class="project-card">
+                            <div class="project-card-top">
+                                <div class="project-icon">
+                                    <img src="src/game15_bot.jpg" alt="Game15 Bot" class="project-icon-img">
+                                </div>
+                                <h3>Game15 Bot</h3>
+                                <p>The childhood game "Game at 15" is now available on Telegram. You can fully enjoy the game using the arrow keys on your keyboard, and the game itself appears as buttons below the message. There's also a general player rating.</p>
+                            </div>
+                            <div class="project-tags"><span>Telebot</span><span>Sqlite3</span></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section contacts-section" data-index="4" id="contacts">
+                <div class="section-content contacts-content">
+                    <div class="section-header">
+                        <h2 class="section-title">Contacts</h2>
+                        <p class="section-subtitle">Let's connect and build something great</p>
+                    </div>
+                    <div class="contacts-grid">
+                        <a href="https://github.com/leonidpoezzhaev" target="_blank" rel="noopener" class="contact-card">
+                            <div class="contact-card-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.605-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12 24 5.37 18.63 0 12 0z"/></svg></div>
+                            <h3>GitHub</h3><span>@LeonidPoezzhaev</span><small>github.com/leonidpoezzhaev</small>
+                        </a>
+                        <a href="https://t.me/leonidpoezzhaev" target="_blank" rel="noopener" class="contact-card">
+                            <div class="contact-card-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18 1.897-.962 6.502-1.359 8.627-.168.9-.5 1.201-.82 1.23-.697.064-1.226-.46-1.901-.903-1.056-.692-1.653-1.123-2.678-1.799-1.185-.78-.417-1.21.258-1.911.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.062 3.345-.479.329-.913.489-1.302.481-.428-.009-1.252-.242-1.865-.441-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.831-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635.099-.002.321.023.465.14.121.098.154.229.17.322.016.093.036.306.02.472z"/></svg></div>
+                            <h3>Telegram</h3><span>@LeonidPoezzhaev</span><small>t.me/leonidpoezzhaev</small>
+                        </a>
+                        <a href="https://vk.com/leonidpoezzhaev" target="_blank" rel="noopener" class="contact-card">
+                            <div class="contact-card-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M15.684 0H8.316C3.725 0 0 3.725 0 8.316v7.368C0 20.275 3.725 24 8.316 24h7.368C20.275 24 24 20.275 24 15.684V8.316C24 3.725 20.275 0 15.684 0zm3.692 17.123h-1.744c-.66 0-.864-.524-2.048-1.724-1.031-1-1.49-1.135-1.744-1.135-.356 0-.458.103-.458.593v1.575c0 .424-.135.678-1.253.678-1.846 0-3.896-1.12-5.335-3.202C5.539 12.37 4.72 10.14 4.72 9.52c0-.254.103-.492.593-.492h1.744c.44 0 .61.203.78.678.864 2.53 2.328 4.742 2.93 4.742.22 0 .322-.102.322-.66V10.72c-.068-1.186-.695-1.287-.695-1.71 0-.204.17-.407.44-.407h2.736c.373 0 .508.203.508.644v3.473c0 .373.17.508.27.508.22 0 .39-.136.78-.678 1.202-1.752 2.06-3.81 2.06-3.81.118-.254.288-.475.644-.475h1.744c.44 0 .542.237.44.542-.186.847-1.93 3.303-1.93 3.303-.153.254-.22.373 0 .66.152.22.66.644 1.002 1.04.644.762 1.143 1.4 1.278 1.82.17.508-.085.762-.543.762z"/></svg></div>
+                            <h3>VK</h3><span>@LeonidPoezzhaev</span><small>vk.com/leonidpoezzhaev</small>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <nav class="section-nav" id="sectionNav">
+        <div class="nav-labels">
+            <span class="nav-label active" data-index="0">Home</span>
+            <span class="nav-label" data-index="1">Stack</span>
+            <span class="nav-label" data-index="2">Edu/Work</span>
+            <span class="nav-label" data-index="3">Projects</span>
+            <span class="nav-label" data-index="4">Contacts</span>
+        </div>
+        <div class="nav-dots">
+            <button class="nav-dot active" data-index="0"><span class="nav-dot-inner"></span></button>
+            <button class="nav-dot" data-index="1"><span class="nav-dot-inner"></span></button>
+            <button class="nav-dot" data-index="2"><span class="nav-dot-inner"></span></button>
+            <button class="nav-dot" data-index="3"><span class="nav-dot-inner"></span></button>
+            <button class="nav-dot" data-index="4"><span class="nav-dot-inner"></span></button>
+        </div>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+</html>
